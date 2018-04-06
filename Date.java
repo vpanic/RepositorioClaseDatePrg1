@@ -35,13 +35,15 @@ public class Date {
 	}
 
 	public boolean isSame(Date fecha){
-		if(day==fecha.day && month==fecha.month && year==fecha.month){
+		if(day==fecha.day && month==fecha.month && year==fecha.year){
 			return true;
+		}else{
+			return false;
 		}
-		return false;
+		
 	}
 	
-	public void printsDay(){
+	public void printsMonth(){
 		switch (month) {
 		case 1:System.out.println("Enero");break;
 		case 2:System.out.println("Febrero");break;
@@ -177,8 +179,8 @@ public class Date {
 		}
 		
 	}
-	public void saberDiaSemana (Date fecha, int diaSemana){
-		String dias[]={"domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"};
+	public void knowDayIs (Date fecha, int diaSemana){
+		String dias[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 		int diasTranscurridos=daySinceFirstDayOfYear(fecha);
 		int resto=diasTranscurridos%7;
 		int diaBuscado=(diaSemana+resto)%7;
@@ -210,3 +212,4 @@ public class Date {
 	
 	
 }
+
